@@ -1,0 +1,32 @@
+#time of day
+print("We are going to estimate what time of day it is!")
+print("Answer the following questions.")
+
+awake = input("Are you awake? ")
+if awake == "yes":
+    hungry = input("Are you hungry? ")
+    if hungry == "yes" or "no":
+        eaten = input("Have you eaten today? ")
+        if eaten == "no":
+            next_meal = input("What is your next meal? ")
+            if next_meal == "breakfast":
+                wake_time = input("What time did you wake up? ")
+                print("It is between " + str(wake_time) + " and 12:00 PM.")
+        else:
+            last_meal = input("What was your last meal? ")
+            if last_meal == "breakfast":
+                wake_time = input("What time did you wake up? ")
+                lunch_time = input("What time do you eat lunch")
+                print("It is between " + str(wake_time) + " and " + str(lunch_time) + ".")
+            elif last_meal == "lunch":
+                lunch_time = input("What time did you eat lunch? ")
+                dinner_time = input("What time do you eat dinner? ")
+                print("It is between " + str(lunch_time) + " and " + str(dinner_time) + " PM.")
+            if last_meal == "dinner":
+                dinner_time = input("What time did you eat dinner? ")
+                sleep_time = input("What time do you sleep? ")
+                print("It is between " + str(dinner_time) + " PM and " + str(sleep_time) +  ".")
+
+else:
+    print("You are dreaming!")
+
