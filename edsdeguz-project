@@ -1,0 +1,26 @@
+import random
+number = random.randint(1, 10)
+tries = 0
+
+name = input("What is your name? ")
+print("Hello " + name + " welcome to random number.")
+
+game = input("Would you like to play the random number game? [yes/no] ")
+
+if game == "no":
+    print("okay " + name + ", maybe next time :(")
+if game == "yes":
+    guess = int(input("Guess the number I'm thinking of between 1 & 10. "))
+    if guess < number:
+        print("Guess higher")
+    if guess > number:
+        print("Guess lower")
+    while guess != number:
+        tries = tries + 1
+        guess = int(input("Try again: "))
+        if guess < number:
+            print("Guess higher")
+        if guess > number:
+            print("Guess lower")
+    if guess == number:
+        print("Congratulations you guessed the correct number,",number,", and it only took you" ,tries,"tries!")
